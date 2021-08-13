@@ -15,4 +15,4 @@
   * After being cut-off from the reset of the Galaxy, Species 404 lays waste to humanity throughout the Outer Reaches
 * Wanderers: War Stories is a simpler, much faster paced card game
   * Where Wanderers focuses on the stories of individuals and crews in their struggles against Species 404, Wanderers: War Stories provides a different view of the war - from the perspective of individual star systems
-* Neither was submitted for js13k 2020, but are likely to be released at some point in the future at [www.wanderersgame.com](https://www.wanderersgame.com/)
+* Neither was submitted for js13k 2020, but both are likely to be released at some point in the future at [www.wanderersgame.com](https://www.wanderersgame.com/)
