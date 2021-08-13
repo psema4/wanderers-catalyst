@@ -3,7 +3,7 @@
 ## Style
 
 * Wanderers: Catalyst is a retro-style mission to find out just what Species 404 is up to.
-* Inspirations: Exerion, Wolfenstein 3D
+* Inspirations: Exerion, Wolfenstein 3D, Battlestar Galactica (2004), Halo
 
 ## Narrative Background
 
