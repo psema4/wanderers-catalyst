@@ -5,6 +5,7 @@ class OutdoorEngine extends GameEngine {
 
     render() {
         this.clearScreen()
+        this.drawBackground()
 
         this.drawText('Outdoor Engine', {
             center: {

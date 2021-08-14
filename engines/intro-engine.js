@@ -72,15 +72,4 @@ class IntroEngine extends GameEngine {
     handleClick(x=-1, y=-1) {
         if (this.done) s += 1
     }
-
-    drawBackground() {
-        c.fillStyle = 'rgb(255,255,255)'
-        let x,y
-        for (let i=0; i < 100; i++) {
-            // fixme: stand-in for squirrel3
-            x = Math.floor(Math.random() * a.width)
-            y = Math.floor(Math.random() * a.height)
-            c.fillRect(x, y, 1, 1)
-        }
-    }
 }

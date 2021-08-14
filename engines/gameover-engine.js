@@ -5,6 +5,7 @@ class GameOverEngine extends GameEngine {
 
     render() {
         this.clearScreen()
+        this.drawBackground()
 
         this.drawText('Game Over', {
             center: {

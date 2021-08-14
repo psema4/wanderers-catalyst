@@ -1,5 +1,20 @@
+class Vec2 {
+    constructor(x=0, y=0) {
+        this.x = x
+        this.y = y
+    }
+}
+
+class Vec3 {
+    constructor(x=0, y=0, z=0) {
+        this.x = x
+        this.y = y
+        this.z = z
+    }
+}
+
 class Rect {
-    constructor(x, y, w, h) {
+    constructor(x=0, y=0, w=0, h=0) {
         this.x = x
         this.y = y
         this.w = w
@@ -9,6 +24,19 @@ class Rect {
 
 class GameEngine {
     constructor() {
+        this.hasStars = false
+    }
+
+    createStars() {
+        this.bgstars = []
+        let x, y, size
+        for (let i=0; i < 100; i++) {
+            x = Math.floor(Math.random() * a.width)
+            y = Math.floor(Math.random() * a.height)
+            size = Math.floor(Math.random() * 2) + 1
+            this.bgstars.push(new Vec3(x, y, size))
+        }
+        this.hasStars = true
     }
 
     render() {
@@ -49,5 +77,12 @@ class GameEngine {
     }
 
     drawBackground() {
+        if (! this.hasStars)
+            this.createStars()
+
+        c.fillStyle = 'rgb(255,255,255)'
+        this.bgstars.forEach(star => {
+            c.fillRect(star.x, star.y, star.z, star.z)
+        })
     }
 }

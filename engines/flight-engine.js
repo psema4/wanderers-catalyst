@@ -5,6 +5,7 @@ class FlightEngine extends GameEngine {
 
     render() {
         this.clearScreen()
+        this.drawBackground()
 
         this.drawText('Flight Engine', {
             center: {

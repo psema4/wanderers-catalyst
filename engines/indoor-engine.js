@@ -5,6 +5,7 @@ class IndoorEngine extends GameEngine {
 
     render() {
         this.clearScreen()
+        this.drawBackground()
 
         this.drawText('Indoor Engine', {
             center: {

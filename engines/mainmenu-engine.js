@@ -5,6 +5,7 @@ class MainMenuEngine extends GameEngine {
 
     render() {
         this.clearScreen()
+        this.drawBackground()
 
         this.drawText('Wanderers:', {
             center: {
