@@ -18,6 +18,7 @@ var space, c, g = [
     new Outdoor1(),
     new Indoor1(),
     new GameOver(),
+    new Options(),
 ], bel = document.body.addEventListener,
 ac, tempo=120, seq
 

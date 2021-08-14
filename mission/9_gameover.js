@@ -18,10 +18,10 @@ class GameOver extends GameEngine {
             fontsize: 32
         })
 
-        if (space) { space = !space; s += 1 }
+        if (space) { space = !space; s = 1 }
     }
 
     handleClick(x=-1, y=-1) {
-        s = 0
+        s = 1
     }
 }
