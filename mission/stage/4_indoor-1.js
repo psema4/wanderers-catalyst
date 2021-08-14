@@ -1,4 +1,4 @@
-class IndoorEngine extends GameEngine {
+class Indoor1 extends GameEngine {
     constructor() {
         super()
     }
@@ -7,7 +7,7 @@ class IndoorEngine extends GameEngine {
         this.clearScreen()
         this.drawBackground()
 
-        this.drawText('Indoor Engine', {
+        this.drawText('Indoor 1 Engine', {
             center: {
                 x: a.width/2,
                 y: 40

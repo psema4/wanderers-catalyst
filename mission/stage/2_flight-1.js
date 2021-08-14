@@ -1,4 +1,4 @@
-class FlightEngine extends GameEngine {
+class Flight1 extends GameEngine {
     constructor() {
         super()
     }
@@ -7,7 +7,7 @@ class FlightEngine extends GameEngine {
         this.clearScreen()
         this.drawBackground()
 
-        this.drawText('Flight Engine', {
+        this.drawText('Flight 1 Engine', {
             center: {
                 x: a.width/2,
                 y: 40

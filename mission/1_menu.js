@@ -1,4 +1,4 @@
-class MainMenuEngine extends GameEngine {
+class Menu extends GameEngine {
     constructor() {
         super()
     }

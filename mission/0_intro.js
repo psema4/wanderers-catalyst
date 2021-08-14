@@ -1,4 +1,4 @@
-class IntroEngine extends GameEngine {
+class Intro extends GameEngine {
     constructor() {
         super()
         this.done = false

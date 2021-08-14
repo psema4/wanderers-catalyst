@@ -1,4 +1,4 @@
-class GameOverEngine extends GameEngine {
+class GameOver extends GameEngine {
     constructor() {
         super()
     }

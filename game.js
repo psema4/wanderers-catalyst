@@ -12,12 +12,12 @@
 */
 
 var space, c, g = [
-    new IntroEngine(),
-    new MainMenuEngine(),
-    new FlightEngine(),
-    new OutdoorEngine(),
-    new IndoorEngine(),
-    new GameOverEngine(),
+    new Intro(),
+    new Menu(),
+    new Flight1(),
+    new Outdoor1(),
+    new Indoor1(),
+    new GameOver(),
 ], bel = document.body.addEventListener,
 ac, tempo=120, seq
 
