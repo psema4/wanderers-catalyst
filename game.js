@@ -18,11 +18,22 @@ var space, c, g = [
     new OutdoorEngine(),
     new IndoorEngine(),
     new GameOverEngine(),
-], bel = document.body.addEventListener
-
+], bel = document.body.addEventListener,
+ac, tempo=120, seq
 
 window.addEventListener('load', () => {
     c = a.getContext`2d`, k = [u = r = d = l = s = 0]
+
+    // sound & music setup
+    ac = new AudioContext()
+    seq = new TinyMusic.Sequence( ac, tempo, [
+          'G3 q',
+          'E4 q',
+          'C4 h'
+    ])
+    seq.gain.gain.value = 0.1
+    seq.loop = false
+    seq.play()
 
     // framwork keys
     //
