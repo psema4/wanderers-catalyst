@@ -18,6 +18,7 @@ class Flight1 extends GameEngine {
             fontsize: 32
         })
 
+        /*
         if (u||d||l||r) {
             this.drawText('*', {
                 center: {
@@ -32,6 +33,7 @@ class Flight1 extends GameEngine {
 
             // console.debug(`udlr: ${u||'-'}${d||'-'}${l||'-'}${r||'-'}`)
         }
+        */
     }
 
     handleClick(x=-1, y=-1) {
