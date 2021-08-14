@@ -1,27 +1,47 @@
 /* References
  *
- * 1. xem's 280b 2020 JS13k Framework - https://gist.github.com/xem/a7ff7215375520d89b73beeabd7b16bd
+ * xem's 280b 2020 JS13k Framework
+ *   https://gist.github.com/xem/a7ff7215375520d89b73beeabd7b16bd
+ *
+ * xerion-zero-js
+ *   https://psema4.github.io/Wireframe-51/exerion-zero-js/
+ *   https://github.com/psema4/Wireframe-51/tree/develop/exerion-zero-js
+ *   https://twitter.com/psema4/status/1415824786631057409?s=19
+ *
  *
 */
 
-let c
-let g = [
+var space, c, g = [
     new IntroEngine(),
     new MainMenuEngine(),
     new FlightEngine(),
     new OutdoorEngine(),
     new IndoorEngine(),
     new GameOverEngine(),
-]
+], bel = document.body.addEventListener
+
 
 window.addEventListener('load', () => {
     c = a.getContext`2d`, k = [u = r = d = l = s = 0]
 
+    // framwork keys
+    //
+    //      up:  w, up arrow, f, z, ;, 7
+    //    down:  s, down arrow, b, h, y, 3
+    //    left:  a, left arrow, q, v, e, 1, 2, 6, spAce, ctrl, alt
+    //   right:  d, right arrow, g, x, r, 5
+    //
     onkeydown = onkeyup = e => k[e.which] = self['lld*rlurdu'[e.which %32 %17]] = e.type[5]
 
+    // custom keys
+    bel('keyup', e => { space = !(e.which == 32) })
+    bel('keydown', e => { space = e.which == 32; space && console.debug('. s p A c e .') })
+
+    // call the current engines renderer on every tick
     setInterval(e => {
         a.width = innerWidth
         a.height = innerHeight
+        if (s >= g.length) s = 0
         g[s].render()
     }, 16)
 

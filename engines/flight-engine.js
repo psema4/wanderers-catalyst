@@ -16,10 +16,24 @@ class FlightEngine extends GameEngine {
             color: { r:63, g: 63, b: 255 },
             fontsize: 32
         })
+
+        if (u||d||l||r) {
+            this.drawText('*', {
+                center: {
+                    x: a.width/2,
+                    y: a.height - 100
+                },
+                owidth: 0,
+                ocolor: { r:0, g:255, b:255 },
+                color: { r:0, g:255, b:255 },
+                fontsize: 32
+            })
+
+            // console.debug(`udlr: ${u||'-'}${d||'-'}${l||'-'}${r||'-'}`)
+        }
     }
 
     handleClick(x=-1, y=-1) {
-        console.log(`woot at ${x}, ${y}!`)
         s += 1
     }
 }

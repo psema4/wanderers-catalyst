@@ -36,15 +36,18 @@ class GameEngine {
     }
 
     drawText(message, options) {
-            c.font = options.fontsize + 'px serif'
-            c.fillStyle = `rgb(${options.color.r}, ${options.color.g}, ${options.color.b})`
-            c.strokeStyle = `rgb(${options.ocolor.r}, ${options.ocolor.g}, ${options.ocolor.b})`
+        c.font = options.fontsize + 'px serif'
+        c.fillStyle = `rgb(${options.color.r}, ${options.color.g}, ${options.color.b})`
+        c.strokeStyle = `rgb(${options.ocolor.r}, ${options.ocolor.g}, ${options.ocolor.b})`
 
-            let textWidth = parseInt(c.measureText(message).width, 10)
-            let textX = options.center.x - (textWidth / 2)
-            let textY = options.center.y - (options.fontsize / 2)
+        let textWidth = parseInt(c.measureText(message).width, 10)
+        let textX = options.center.x - (textWidth / 2)
+        let textY = options.center.y - (options.fontsize / 2)
 
-            c.fillText(message, textX, textY)
-            c.strokeText(message, textX, textY)
-        }
+        c.fillText(message, textX, textY)
+        c.strokeText(message, textX, textY)
+    }
+
+    drawBackground() {
+    }
 }

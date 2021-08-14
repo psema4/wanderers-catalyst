@@ -16,6 +16,8 @@ class GameOverEngine extends GameEngine {
             color: { r:63, g: 63, b: 255 },
             fontsize: 32
         })
+
+        if (space) { space = !space; s += 1 }
     }
 
     handleClick(x=-1, y=-1) {
