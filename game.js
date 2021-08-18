@@ -52,6 +52,7 @@ window.addEventListener('load', () => {
         a.width = innerWidth
         a.height = innerHeight
         if (s >= g.length) s = 0
+        g[s].checkCollisions()
         g[s].render()
     }, 16)
 

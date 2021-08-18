@@ -20,6 +20,58 @@ class Rect {
         this.w = w
         this.h = h
     }
+
+    isCollidingWith(other) {
+        return (this.x < other.x + other.w && this.x + this.w > other.x &&
+                this.y < other.y + other.h && this.y + this.h > other.y)
+    }
+}
+
+class Actor extends Rect {
+    constructor(name, options={}) {
+        const actorWidth = options.width || 64
+        const actorHeight = options.height || 64
+
+        super(
+            options.center.x - actorWidth/2,
+            options.center.y - actorHeight/2,
+            actorWidth,
+            actorHeight
+        )
+
+        this.name = name
+        this.options = options
+    }
+
+    draw() {
+        if (typeof this.options.draw === 'function')
+            this.options.draw(this)
+    }
+}
+
+// may use in future with an image generator, stick
+// with actors that draw themselves for now
+class ImageActor extends Actor {
+    constructor(name, options) {
+        const imgElem = document.getElementById(name)
+
+        const actorWidth = imgElem.width
+        const actorHeight = imgElem.height
+
+        options.width = actorWidth
+        options.height = actorHeight
+
+        super(name, options)
+
+        this.elem = imgElem
+    }
+
+    draw() {
+        c.drawImage(this.elem, this.x, this.y)
+
+        if (typeof this.options.draw === 'function')
+            this.options.draw(this)
+    }
 }
 
 class GameEngine {
@@ -41,6 +93,10 @@ class GameEngine {
 
     render() {
         this.clearScreen()
+    }
+
+    checkCollisions() {
+        // virtual
     }
 
     handleClick(x=-1, y=-1) {
